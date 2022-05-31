@@ -1,4 +1,16 @@
+// .service {
+//   @media screen and (max-width: 1199px) {
+//     display: none;
+//   }
+// }
+
 .service {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  padding-top: 0;
+
   &-title {
     color: var(--title-text-color);
     font-size: 36px;
