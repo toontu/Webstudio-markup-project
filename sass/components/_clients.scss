@@ -1,5 +1,5 @@
 .clents-title {
-  color: var(--title-text-color);
+  color: $title-text-color;
 
   font-size: 28px;
   line-height: 1.18;
@@ -42,7 +42,7 @@
 
   &:hover,
   &:focus {
-    border-color: var(--accent-color);
+    border-color: $accent-color;
     outline: none;
   }
 }
@@ -62,7 +62,7 @@
 
   .clients-item-link:hover &,
   .clients-item-link:focus & {
-    fill: var(--accent-color);
+    fill: $accent-color;
     outline: none;
   }
 }

@@ -7,7 +7,7 @@
   height: 80px;
   padding-top: 21px;
   padding-bottom: 21px;
-  background-color: var(--primary-white-color);
+  background-color: $primary-white-color;
   border-bottom: 1px solid #ececec;
 
   @media screen and (min-width: 1200px) {
@@ -39,7 +39,7 @@
 }
 
 .accent {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 /* Хэдер навигация */
@@ -63,7 +63,7 @@
     display: block;
     bottom: -32px;
     left: 0;
-    background-color: var(--accent-color);
+    background-color: $accent-color;
   }
 }
 
@@ -72,7 +72,7 @@
 }
 
 .menu .link {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -81,11 +81,11 @@
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accent-color;
   }
 
   &.current {
-    color: var(--accent-color);
+    color: $accent-color;
   }
 }
 
@@ -112,7 +112,7 @@
 .header__contacts-item {
   display: flex;
   align-items: center;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   fill: currentColor;
 
   @media screen and (min-width: 1200px) {
@@ -149,14 +149,14 @@
 
 .header__contacts .link:hover,
 .header__contacts .link:focus {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--primary-white-color);
+  background-color: $primary-white-color;
   width: 100vw;
   height: 100vh;
   padding-top: 48px;
@@ -195,7 +195,7 @@
 
   .menu-open-btn:hover &,
   .menu-open-btn:focus & {
-    fill: var(--accent-color);
+    fill: $accent-color;
   }
 }
 
@@ -214,19 +214,19 @@
 
   .menu-close-btn:hover &,
   .menu-close-btn:focus & {
-    fill: var(--accent-color);
+    fill: $accent-color;
   }
 }
 
 .mobile-menu-link {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
 
   &.current {
-    color: var(--accent-color);
+    color: $accent-color;
   }
 }
 
@@ -256,14 +256,14 @@
     font-size: 34px;
     line-height: 1.18;
     letter-spacing: 0.02em;
-    color: var(--accent-color);
+    color: $accent-color;
   }
   &.mail {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
   }
 }
 
@@ -277,7 +277,7 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .mobile-soc-list__item {
