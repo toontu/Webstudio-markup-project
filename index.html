@@ -23,7 +23,7 @@
   </head>
   <body>
     <!--Шапка-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-nav">
         <nav class="navigation">
           <a href="./index.html" class="logo header__logo link">
@@ -59,8 +59,85 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="menu-open-btn">
+          <svg class="menu-open-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mobile-menu is-hidden">
+        <div class="container">
+          <button type="button" class="menu-close-btn">
+            <svg class="menu-close-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__list list">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu-link link current">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu-link link">Портфолио</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu-link link">Контакты</a>
+            </li>
+          </ul>
+          <div class="mobile-contacts-social">
+            <ul class="mobile-contacts list">
+              <li class="mobile-contacts-item">
+                <a href="tel:+380961111111" class="mobile-contacts-link tel link"
+                  >+38 096 111 11 11
+                </a>
+              </li>
+              <li class="mobile-contacts-item">
+                <a href="mailto:info@devstudio.com" class="mobile-contacts-link mail link"
+                  >info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mobile-soc-list list">
+              <li class="mobile-soc-list__item">
+                <a
+                  class="mobile-soc-list__link link"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Instagram
+                </a>
+              </li>
+              <li class="mobile-soc-list__item">
+                <a
+                  class="mobile-soc-list__link link"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Twitter
+                </a>
+              </li>
+              <li class="mobile-soc-list__item">
+                <a
+                  class="mobile-soc-list__link link"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Facebook
+                </a>
+              </li>
+              <li class="mobile-soc-list__item">
+                <a
+                  class="mobile-soc-list__link link"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main>
       <!--Герой-->
@@ -128,15 +205,15 @@
           <h2 class="service-title">Чем мы занимаемся</h2>
           <ul class="service-list list">
             <li class="service-card">
-              <img src="./images/development.jpg" alt="Разработка" width="370" height="294" />
+              <img src="./images/works1.jpg" alt="Разработка" width="370" height="294" />
               <h3 class="service-card-title">Десктопные приложения</h3>
             </li>
             <li class="service-card">
-              <img src="./images/marketing.jpg" alt="Маркетинг" width="370" height="294" />
+              <img src="./images/works2.jpg" alt="Маркетинг" width="370" height="294" />
               <h3 class="service-card-title">Мобильные приложения</h3>
             </li>
             <li class="service-card">
-              <img src="./images/design.jpg" alt="Дизайн" width="370" height="294" />
+              <img src="./images/works3.jpg" alt="Дизайн" width="370" height="294" />
               <h3 class="service-card-title">Дизайнерские решения</h3>
             </li>
           </ul>
@@ -148,12 +225,27 @@
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-card">
-              <img
-                src="./images/ihor-demianenko.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <!-- в picture >> в img высоту и ширину ставим по самой большой картинке (в данном случае - это мобильная) -->
+              <picture>
+                <source
+                  srcset="./images/employee1-270.jpg 1x, ./images/employee1-270-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/employee1-354.jpg 1x, ./images/employee1-354-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/employee1-450.jpg 1x, ./images/employee1-450-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/employee1-450.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="content">
                 <h3 class="team-card-title">Игорь Демьяненко</h3>
                 <p class="team-card-text">Product Designer</p>
@@ -190,7 +282,21 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/olha-repina.jpg" alt="Ольга Репина" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/employee2-270.jpg 1x, ./images/employee2-270-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/employee2-354.jpg 1x, ./images/employee2-354-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/employee2-450.jpg 1x, ./images/employee2-450-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/employee2-450.jpg" alt="Ольга Репина" width="450" height="460" />
+              </picture>
               <div class="content">
                 <h3 class="team-card-title">Ольга Репина</h3>
                 <p class="team-card-text">Frontend Developer</p>
@@ -227,12 +333,26 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/nikolay-tarasov.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/employee3-270.jpg 1x, ./images/employee3-270-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/employee3-354.jpg 1x, ./images/employee3-354-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/employee3-450.jpg 1x, ./images/employee3-450-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/employee3-450.jpg"
+                  alt="Николай Тарасов"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="content">
                 <h3 class="team-card-title">Николай Тарасов</h3>
                 <p class="team-card-text">Marketing</p>
@@ -269,12 +389,26 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/mikhail-yermakov.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/employee4-270.jpg 1x, ./images/employee4-270-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/employee4-354.jpg 1x, ./images/employee4-354-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/employee4-450.jpg 1x, ./images/employee4-450-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/employee4-450.jpg"
+                  alt="Михаил Ермаков"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="content">
                 <h3 class="team-card-title">Михаил Ермаков</h3>
                 <p class="team-card-text">UI Designer</p>
@@ -502,5 +636,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
